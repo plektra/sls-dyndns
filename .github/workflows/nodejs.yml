@@ -40,7 +40,7 @@ jobs:
       uses: actions/setup-node@v1
     - run: npm ci
     - name: serverless deploy
-      uses: serverless/github-action@v1
+      uses: serverless/github-action@master
       with:
         args: deploy
       env:
