@@ -4,7 +4,7 @@
   "description": "Dynamic DNS provider with Serverless Framework &amp; AWS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/plektra/sls-dyndns/issues"
   },
-  "homepage": "https://github.com/plektra/sls-dyndns#readme"
+  "homepage": "https://github.com/plektra/sls-dyndns#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-jest": "^25.3.0",
+    "jest": "^25.3.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.656.0"
+  }
 }
