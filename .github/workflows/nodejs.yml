@@ -32,15 +32,15 @@ jobs:
 
   deploy:
     name: deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: npm install
-      uses: actions/npm@master
-      with:
-        args: install
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+    - run: npm ci
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: serverless/github-action@v1
       with:
         args: deploy
       env:
