@@ -20,7 +20,8 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "babel-jest": "^25.3.0",
-    "jest": "^25.3.0"
+    "jest": "^25.3.0",
+    "serverless": "^1.67.3"
   },
   "dependencies": {
     "aws-sdk": "^2.656.0"
