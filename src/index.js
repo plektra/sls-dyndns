@@ -6,4 +6,11 @@ AWS.config.update({
 
 exports.handler = async event => {
   console.log("EVENT: " + JSON.stringify(event));
+
+  const response = {
+  	statusCode: 200,
+  	body: JSON.stringify({message: "Hello"})
+  };
+
+  return response;
 };
