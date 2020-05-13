@@ -1,10 +1,10 @@
-const index = require('../src');
+const api = require('../src/api');
 
 describe('Executing AWS Lambda function', () => {
 	describe('with empty event', () => {
 		test('should return undefined.', async () => {
 			expect.assertions(1);
-			await expect(index.handler({})).resolves.toEqual(undefined);
+			await expect(api.handler({})).resolves.toEqual(undefined);
 		})
 	})
 });

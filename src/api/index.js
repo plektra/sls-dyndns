@@ -12,5 +12,5 @@ exports.handler = async event => {
   	body: JSON.stringify({message: "Hello"})
   };
 
-  return response;
+  //return response;
 };

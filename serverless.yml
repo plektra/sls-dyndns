@@ -12,11 +12,18 @@ package:
 
 functions:
   api:
-    handler: src/index.handler
+    handler: src/api/index.handler
     events:
       - http:
           path: /
           method: get
+          authorizer:
+            name: ddnsAuth
+            resultTtlInSeconds: 0
+            type: request
+            identitySource: method.request.header.Authorization
+  ddnsAuth:
+    handler: src/auth/index.handler
 
 resources:
   Resources:
